@@ -8,8 +8,11 @@ use std::{
 };
 
 fn main() {
+   
     #![allow(unused)]
     #![cfg(unix)]  // configuration for enclosing items using !-> for unix
+     use std::mem::*;
+     let u = "Human";
     // let list = [1, 2, 3, 4, 5];
     let list = [1, 2, 3, 4, 5];
     let str = String::from("Hello world");
@@ -131,7 +134,24 @@ fn main() {
             numbers.push(line.parse()?);
         }
         Ok(numbers)
+
+       
     }
+ let y = 200;
+  let z: i32;
+
+ z  = y << 2;
+
+println!("After Shifting,,, {}", z);
+
+let x = String::from("Hello");
+use std::cell;
+let y = &x;
+let z = &y;
+debug_assert_eq!(x, **z);
+println!("Value of y {}", y);
+println!("Value of z {z}");
+println!("Value of **z {}", **z);
 }
 
 // pass the --test-threads to the test executable
