@@ -176,6 +176,22 @@ fn main() {
     struct Salad {
         veggies: Vec<Box<dyn Vegetable>>
   };
+
+    // use std::collections::HashMap;
+    // let vectors = vec![0; 1024];
+    // let maps: HashMap<usize, &i32> = vectors.iter().enumerate().collect();
+
+    // let res = "Hello World".chars().flat_map(|c| c.to_uppercase()).collect::<String>();
+    // let mut buffer = String::with_capacity(1);
+    // buffer.push('h');
+    // buffer.push('e');
+    // println!("The buffer holds {:?} ", buffer)
+
+    let str_literal = "I'm from a certain village";
+    let slice = &str_literal[..];
+    let b = str_literal.chars().nth(1);
+    println!("The literal is {:?} ", b.unwrap())
+    // println!("length of the vector is {:?}", res.split_whitespace().collect::<Vec<_>>())
 }
 
 // pass the --test-threads to the test executable
