@@ -1,20 +1,26 @@
 #![allow(unused)]
 use core::mem::*;
 use std::{
+    collections::{self, HashMap},
     f32::consts::PI,
     fs,
     io::{self, BufRead},
-    process, vec, collections
+    process, vec, ops::Mul,
 };
 
 fn main() {
-   
     #![allow(unused)]
-    #![cfg(unix)]  // configuration for enclosing items using !-> for unix
-     use std::mem::*;
-     let u = "Human";
-    // let list = [1, 2, 3, 4, 5];
-    let list = [1, 2, 3, 4, 5];
+    #![cfg(unix)] // configuration for enclosing items using !-> for unix
+    use std::mem::*;
+    let o = 0;
+    let mut map: HashMap<String, &str> = HashMap::new();
+    o.mul(4);
+    // Iterator
+    let u = "नमस्ते";
+    let u2: String = u.chars().take(1).collect();
+
+    let lst = &u[0..].bytes().collect::<Vec<u8>>();
+    println!("lst is {:?}", lst);
     let str = String::from("Hello world");
 
     let val = Some(20);
@@ -134,24 +140,42 @@ fn main() {
             numbers.push(line.parse()?);
         }
         Ok(numbers)
-
-       
     }
- let y = 200;
-  let z: i32;
+    let y = 200;
+    let z: i32;
 
- z  = y << 2;
+    z = y << 2;
 
-println!("After Shifting,,, {}", z);
+    let res = "Hello Worlds".chars().collect::<Vec<_>>();
 
-let x = String::from("Hello");
-use std::cell;
-let y = &x;
-let z = &y;
-debug_assert_eq!(x, **z);
-println!("Value of y {}", y);
-println!("Value of z {z}");
-println!("Value of **z {}", **z);
+    println!("After Shifting,,, {}", z);
+
+    let x = String::from("Hello");
+    use std::cell;
+    let y = &x;
+    let z = &y;
+    debug_assert_eq!(x, **z);
+    println!("Value of y {}", y);
+    println!("Value of z {z}");
+    println!("Value of **z {}", **z);
+
+    fn time_sort_run() -> Option<i32> {
+        Some(20)
+    }
+
+    if let Some(digit) = time_sort_run() {
+        debug_assert_eq!(digit, 20);
+    };
+
+    println!("u2 is {u2}");
+    trait Vegetable {
+     
+  };
+  
+
+    struct Salad {
+        veggies: Vec<Box<dyn Vegetable>>
+  };
 }
 
 // pass the --test-threads to the test executable
@@ -163,24 +187,20 @@ println!("Value of **z {}", **z);
 // open html doc of your project
 // cargo doc --no-deps --open
 
-
 // No run in comment
 // ```no_run
 // ```
 
-
 // totally ignore and not comiling them
 // ```ignore
-//``` 
-
+//```
 
 // Specifying Deps
-//  image = { git = "https://github.com/Piston/image.git", rev = "528f19c" }    
-// Specifying a dir 
+//  image = { git = "https://github.com/Piston/image.git", rev = "528f19c" }
+// Specifying a dir
 //  image = { path = "vendor/image" }
 
 //  dependency = "=1.0.1" use exact version
 //  dependency = ">=1.0.1" user 1.0.1 or highter
 //  dependency = ">1.0.1 < 1.1.9" higher than 1.0.1 and less than 1.1.9
 //  dependency = "<=2.3.2" exact version or less
-
