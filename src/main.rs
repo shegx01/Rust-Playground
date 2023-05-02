@@ -5,7 +5,8 @@ use std::{
     f32::consts::PI,
     fs,
     io::{self, BufRead},
-    process, vec, ops::Mul,
+    ops::Mul,
+    process, vec,
 };
 
 fn main() {
@@ -168,14 +169,11 @@ fn main() {
     };
 
     println!("u2 is {u2}");
-    trait Vegetable {
-     
-  };
-  
+    trait Vegetable {};
 
     struct Salad {
-        veggies: Vec<Box<dyn Vegetable>>
-  };
+        veggies: Vec<Box<dyn Vegetable>>,
+    };
 
     // use std::collections::HashMap;
     // let vectors = vec![0; 1024];
@@ -185,7 +183,12 @@ fn main() {
     // let mut buffer = String::with_capacity(1);
     // buffer.push('h');
     // buffer.push('e');
+    // buffer.push_str("llo world");
     // println!("The buffer holds {:?} ", buffer)
+
+    // push, push_str, insert, insert_str all works on chars and &str respoectively
+    // write! and writeln! macros are used for writing to stdout string and the later
+    // with new line
 
     let str_literal = "I'm from a certain village";
     let slice = &str_literal[..];
