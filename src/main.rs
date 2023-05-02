@@ -174,6 +174,14 @@ fn main() {
     struct Salad {
         veggies: Vec<Box<dyn Vegetable>>,
     };
+    // patterns
+    // trim_start_matches
+    // contains
+    // starts_with
+    // ends_with
+    // find
+    // rfind
+    // All returns Option(Index)
 
     // use std::collections::HashMap;
     // let vectors = vec![0; 1024];
